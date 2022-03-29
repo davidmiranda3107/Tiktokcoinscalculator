@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_main"
+            android:icon="@drawable/ic_main"
+            android:title="@string/menu_main" />
+        <item android:id="@+id/nav_calc"
+            android:icon="@drawable/ic_coin"
+            android:title="@string/menu_calc" />
+        <item android:id="@+id/nav_recomendation"
+            android:icon="@drawable/ic_recomendation"
+            android:title="@string/menu_recomendation" />
+        <item android:id="@+id/nav_description"
+            android:icon="@drawable/ic_description"
+            android:title="@string/menu_description" />
+        <item android:id="@+id/nav_terms"
+            android:icon="@drawable/ic_terms"
+            android:title="@string/menu_terms" />
+        <item android:id="@+id/nav_reset_consent"
+            android:icon="@drawable/ic_reset_consent"
+            android:title="@string/menu_ads"
+            android:onClick="onEditConsent" />
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_rate"
+                android:title="Rate us" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="com.e.tiktokcoinscalculator.MainFragment"
+        android:label="@string/menu_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_MainFragment_to_CalcDataFragment"
+            app:destination="@id/nav_calc" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_RecomendationFragment"
+            app:destination="@id/nav_recomendation" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_DescriptionFragment"
+            app:destination="@id/nav_description" />
+
+        <action
+            android:id="@+id/action_MainFragment_to_TermsFragment"
+            app:destination="@id/nav_terms" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_calc"
+        android:name="com.e.tiktokcoinscalculator.CalcDataFragment"
+        android:label="@string/menu_calc"
+        tools:layout="@layout/fragment_calc_data">
+        <action
+            android:id="@+id/action_CalcDataFragment_to_MainFragment"
+            app:destination="@id/nav_main" />
+        <action
+            android:id="@+id/action_CalcDataFragment_to_CalcResultFragment"
+            app:destination="@id/nav_result"  />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_result"
+        android:name="com.e.tiktokcoinscalculator.CalcResultFragment"
+        android:label="@string/menu_calc"
+        tools:layout="@layout/fragment_calc_result">
+        <argument
+            android:name="coins"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+        <action
+            android:id="@+id/action_CalcResultFragment_to_MainFragment"
+            app:destination="@id/nav_main" />
+        <action
+            android:id="@+id/action_CalcResultFragment_to_CalcDataFragment"
+            app:destination="@id/nav_calc" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_recomendation"
+        android:name="com.e.tiktokcoinscalculator.RecomendationFragment"
+        android:label="@string/menu_recomendation"
+        tools:layout="@layout/fragment_recomendation">
+        <action
+            android:id="@+id/action_RecomendationFragment_to_RecomendationOneFragment"
+            app:destination="@id/nav_recomendation_1" />
+        <action
+            android:id="@+id/action_RecomendationFragment_to_RecomendationTwoFragment"
+            app:destination="@id/nav_recomendation_2" />
+        <action
+            android:id="@+id/action_RecomendationFragment_to_RecomendationThreeFragment"
+            app:destination="@id/nav_recomendation_3" />
+        <action
+            android:id="@+id/action_RecomendationFragment_to_MainFragment"
+            app:destination="@id/nav_main" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_recomendation_1"
+        android:name="com.e.tiktokcoinscalculator.RecomendationOneFragment"
+        android:label="@string/rec_question_1"
+        tools:layout="@layout/fragment_recomendation_1">
+        <action
+            android:id="@+id/action_RecomendationOneFragment_to_RecomendationFragment"
+            app:destination="@id/nav_recomendation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_recomendation_2"
+        android:name="com.e.tiktokcoinscalculator.RecomendationTwoFragment"
+        android:label="@string/rec_question_2"
+        tools:layout="@layout/fragment_recomendation_2">
+        <action
+            android:id="@+id/action_RecomendationTwoFragment_to_RecomendationFragment"
+            app:destination="@id/nav_recomendation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_recomendation_3"
+        android:name="com.e.tiktokcoinscalculator.RecomendationThreeFragment"
+        android:label="@string/rec_question_3"
+        tools:layout="@layout/fragment_recomendation_3" >
+        <action
+            android:id="@+id/action_RecomendationThreeFragment_to_RecomendationFragment"
+            app:destination="@id/nav_recomendation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_description"
+        android:name="com.e.tiktokcoinscalculator.DescriptionFragment"
+        android:label="@string/menu_description"
+        tools:layout="@layout/fragment_description">
+        <action
+            android:id="@+id/action_DescriptionFragment_to_MainFragment"
+            app:destination="@id/nav_main" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_terms"
+        android:name="com.e.tiktokcoinscalculator.TermsFragment"
+        android:label="@string/menu_terms"
+        tools:layout="@layout/fragment_terms">
+        <action
+            android:id="@+id/action_TermsFragment_to_MainFragment"
+            app:destination="@id/nav_main" />
+    </fragment>
+</navigation>
